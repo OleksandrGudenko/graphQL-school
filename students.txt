@@ -1,0 +1,37 @@
+query LookForStudent {
+  student(id:1) {
+    id, email, name, birthday, studentGroupId
+  }
+}
+
+query ShowAllStudents {
+  students {
+    id, email, name, birthday, studentGroupId
+  } 
+}
+
+mutation CreateStudent {
+  createStudent(
+    email: "test@email.com"
+    name: "Piter Parker"
+    birthday: "2001-08-10"
+    studentGroupId: "DIN17SP"
+  ) {
+    success
+  }
+}
+
+mutation ModifyStudent { 
+	modifyStudent(
+    id: 1
+    studentGroupId: "bro.no@way.lol"
+  ) {
+    success
+  }
+}
+
+mutation removeStudent {
+  removeStudent( id: 2 ) {
+    success
+  }
+}

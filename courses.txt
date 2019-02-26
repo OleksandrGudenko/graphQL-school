@@ -1,0 +1,35 @@
+query LookForCourse { 
+	course(id:1) {
+    id, description, teacherName
+  }
+}
+
+query ShowAllCourses { 
+	courses {
+        id, description, teacherName
+  }
+}
+
+mutation CreateCourse {
+  createCourse(
+    description: "All about Web"
+    teacherName: "Piter Parker"
+  ) {
+    success
+  }
+}
+
+mutation ModifyCourse { 
+	modifyCourse(
+    id: 3
+    description: "Webbing"
+  ) {
+    success
+  }
+}
+
+mutation removeCourse {
+  removeCourse( id: 3 ) {
+    success
+  }
+}

@@ -1,0 +1,40 @@
+query LookForGrade { 
+	grade(id:3) {
+    id, grade, student{studentId, studentName},
+    course{courseId, courseName}
+  }
+}
+
+query ShowAllCourses { 
+	grades {
+    id, grade, student{studentId, studentName},
+    course{courseId, courseName}
+  }
+}
+
+mutation AssignGrade {
+  assignGrade(
+    grade: "3"
+    studentId: "1"
+		courseId: "1"
+    date: "2019-02-26"
+  ) {
+    success
+  }
+}
+
+mutation ModifyGrade { 
+	modifyGrade(
+    id: 3
+    grade: "5"
+    courseId: "2"
+  ) {
+    success
+  }
+}
+
+mutation RemoveGrade {
+  removeGrade ( id: 1 ) {
+    success
+  }
+}
