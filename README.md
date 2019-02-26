@@ -4,7 +4,7 @@ Task 3 in web-interfases course at OAMK.
 
     1. npm install
 
-#it is possible to use nodemon instead of npm
+it is possible to use nodemon instead of npm
 
     2. 1 npm students.js
     2. 2 npm courses.js
